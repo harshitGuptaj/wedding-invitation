@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>॥ शुभ विवाह ॥ | Ancient Scroll</title>
+<style>
+:root{--cream:#f7e8c8;--paper:#efd9ac;--red:#a52a20;--red2:#71150f;--ink:#2b1a12;--gold:#c8912f}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#26070c;color:var(--ink);font-family:Georgia,"Times New Roman",serif;overflow-x:hidden}
+.back{position:fixed;top:16px;left:16px;z-index:30;padding:8px 14px;border:1px solid var(--gold);border-radius:999px;background:rgba(30,5,10,.82);color:var(--cream);text-decoration:none;font-size:11px;letter-spacing:2px}
+.scroll-root{position:relative;height:640vh}
+.stage{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-direction:column;background:radial-gradient(ellipse at 50% 35%,#7b1d24 0%,#3d0a11 55%,#150406 100%)}
+.stage::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,220,150,.11) 1px,transparent 1px);background-size:24px 24px;opacity:.55}
+.ambient{position:absolute;width:80vmin;height:80vmin;border-radius:50%;background:radial-gradient(circle,rgba(255,205,120,.20),transparent 70%);pointer-events:none}
+.scroll-wrap{position:relative;z-index:2;width:min(88vw,620px);display:flex;flex-direction:column;align-items:center;filter:drop-shadow(0 28px 46px rgba(0,0,0,.6))}
+.rod{width:108%;height:26px;flex:0 0 auto;position:relative;z-index:4;border-radius:13px;background:repeating-linear-gradient(92deg,#6d3416 0 7px,#9b5526 7px 14px,#c4863f 14px 19px,#6d3416 19px 26px);box-shadow:inset 0 3px 5px rgba(255,220,160,.35),inset 0 -5px 8px rgba(0,0,0,.5),0 6px 14px rgba(0,0,0,.55)}
+.rod::before,.rod::after{content:"";position:absolute;top:-6px;width:20px;height:38px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#e0a95c,#8c4a1e 65%,#4b240d);box-shadow:0 3px 8px rgba(0,0,0,.55)}
+.rod::before{left:-14px}.rod::after{right:-14px}
+.rod.top{margin-bottom:-3px}.rod.bottom{margin-top:-3px}
+.parchment{position:relative;width:100%;height:0;overflow:hidden;background:
+  radial-gradient(circle at 20% 15%,rgba(160,90,40,.10) 0 2px,transparent 3px),
+  radial-gradient(circle at 78% 62%,rgba(160,90,40,.09) 0 2px,transparent 3px),
+  repeating-linear-gradient(115deg,rgba(120,70,30,.025) 0 3px,transparent 3px 8px),
+  linear-gradient(150deg,var(--cream),var(--paper));
+  background-size:29px 29px,37px 37px,auto,auto;border-left:3px solid #6b3d1c;border-right:3px solid #6b3d1c}
+.parchment::after{content:"";position:absolute;left:0;right:0;bottom:0;height:20px;background:linear-gradient(rgba(80,40,15,.28),rgba(255,240,200,.08) 65%,rgba(40,15,5,.35));z-index:3;pointer-events:none}
+.ink-border{position:absolute;inset:13px;border:3px double var(--red);outline:2px solid var(--ink);outline-offset:5px;pointer-events:none;z-index:2}
+.corner{position:absolute;font-size:22px;color:var(--red2);z-index:2}.c1{top:22px;left:24px}.c2{top:22px;right:24px}.c3{bottom:26px;left:24px}.c4{bottom:26px;right:24px}
+.content{position:relative;z-index:1;width:100%}
+.sec{position:relative;text-align:center;padding:26px 32px 18px;opacity:0}
+.sec .orn{color:var(--red);font-size:15px;letter-spacing:9px;margin-bottom:10px}
+.sec h1{font-family:"Nirmala UI",serif;color:var(--red2);font-size:clamp(26px,5vw,38px);line-height:1.18}
+.sec h2{font-family:"Nirmala UI",serif;color:var(--ink);font-size:clamp(16px,2.8vw,20px);line-height:1.5;font-weight:500}
+.sec b{color:var(--red2)}
+.tag{font-size:9px;letter-spacing:4px;color:var(--red);font-family:Georgia,serif;line-height:1.4}
+.tag+.tag{margin-top:8px}
+.tag+h1{margin-top:10px}
+.rule{width:72%;height:2px;margin:16px auto;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.details{padding-top:24px}
+.details .when{font-family:"Nirmala UI",serif;font-size:clamp(18px,3.4vw,25px);color:var(--ink);margin:10px 0 8px}
+.details .where{font-family:"Nirmala UI",serif;font-size:clamp(14px,2.7vw,19px);color:var(--red2);line-height:1.6}
+.names h1{font-size:clamp(32px,6.4vw,52px);letter-spacing:1px}
+.names h1 em{font-style:normal;color:var(--gold);font-size:.7em;margin:0 10px}
+.names .parents{font-family:"Nirmala UI",serif;font-size:clamp(11px,2.2vw,14px);color:var(--ink);line-height:1.7;margin-top:12px}
+.ganesh{padding-bottom:20px}
+.ganesh svg{width:min(43vw,195px);height:auto;display:block;margin:12px auto 14px;filter:drop-shadow(0 8px 14px rgba(100,30,10,.35))}
+.ganesh .tag{margin-top:0}
+.hint{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:20;color:#ffe6ac;font-family:"Nirmala UI",serif;font-size:12px;letter-spacing:2px;animation:bob 1.7s infinite ease-in-out;transition:opacity .35s}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,7px)}}
+@media(max-width:520px){.scroll-root{height:700vh}.sec{padding:22px 22px 14px}.rod{height:22px}}
+</style>
+</head>
+<body>
+<a class="back" href="index.html">← BACK</a>
+<div class="scroll-root" id="wrap">
+  <div class="stage" id="stage">
+    <div class="ambient"></div>
+    <div class="scroll-wrap" id="scrollWrap">
+      <div class="rod top" id="rodTop"></div>
+      <div class="parchment" id="paper">
+        <div class="ink-border"></div>
+        <span class="corner c1">❀</span><span class="corner c2">❀</span>
+        <span class="corner c3">❀</span><span class="corner c4">❀</span>
+        <div class="content">
+          <section class="sec header" id="secHeader">
+            <div class="orn">॥ ✦ ॥ ✦ ॥</div>
+            <div class="tag">THE WEDDING INVITATION</div>
+            <h1>॥ शुभ विवाह ॥</h1>
+            <div class="rule"></div>
+          </section>
+
+          <section class="sec names" id="secNames">
+            <h1>शिवम <em>&</em> कुमकुम</h1>
+            <div class="parents">
+              सुपुत्र: श्री महेश चंद्र गुप्ता एवं श्रीमती प्रेमलता गुप्ता<br>
+              सुपुत्री: श्री मुन्ना लाल गुप्ता एवं श्रीमती तनु गुप्ता
+            </div>
+            <div class="rule"></div>
+          </section>
+
+          <section class="sec details" id="secDetails">
+            <div class="tag">WITH LOVE, WE INVITE YOU</div>
+            <div class="tag">THE WEDDING CEREMONY</div>
+            <div class="when"><b>गुरुवार, 26 नवंबर 2026</b> • शाम 6:00 बजे</div>
+            <div class="where"><b>स्थान</b><br>S.R.K Farm House<br>मंशागढ़ी नगलिया मोड़, झाझर रोड<br>जिला - बुलंदशहर</div>
+            <div class="rule"></div>
+          </section>
+
+          <section class="sec ganesh" id="secGanesh">
+            <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="gBody" cx="36%" cy="28%" r="76%"><stop offset="0" stop-color="#df6047"/><stop offset=".52" stop-color="#a52a20"/><stop offset="1" stop-color="#68150e"/></radialGradient>
+                <linearGradient id="gGold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6dda0"/><stop offset=".48" stop-color="#c8912f"/><stop offset="1" stop-color="#875916"/></linearGradient>
+                <radialGradient id="gBelly" cx="42%" cy="32%" r="70%"><stop offset="0" stop-color="#c85038"/><stop offset="1" stop-color="#7d1b12"/></radialGradient>
+                <filter id="soft"><feGaussianBlur stdDeviation="1.6"/></filter>
+              </defs>
+              <ellipse cx="150" cy="277" rx="84" ry="10" fill="#3d1109" opacity=".30"/>
+              <path d="M82 244 C98 230 122 233 136 250 C118 263 92 263 82 244Z" fill="url(#gBody)" stroke="#2b1a12" stroke-width="4"/>
+              <path d="M218 244 C202 230 178 233 164 250 C182 263 208 263 218 244Z" fill="url(#gBody)" stroke="#2b1a12" stroke-width="4"/>
+              <path d="M88 176 C60 188 52 224 76 240" fill="none" stroke="#2b1a12" stroke-width="22" stroke-linecap="round"/>
+              <path d="M88 176 C60 188 52 224 76 240" fill="none" stroke="url(#gBody)" stroke-width="17" stroke-linecap="round"/>
+              <path d="M212 176 C240 188 248 224 224 240" fill="none" stroke="#2b1a12" stroke-width="22" stroke-linecap="round"/>
+              <path d="M212 176 C240 188 248 224 224 240" fill="none" stroke="url(#gBody)" stroke-width="17" stroke-linecap="round"/>
+              <ellipse cx="150" cy="212" rx="88" ry="66" fill="url(#gBody)" stroke="#2b1a12" stroke-width="4"/>
+              <ellipse cx="150" cy="224" rx="56" ry="48" fill="url(#gBelly)" opacity=".85"/>
+              <ellipse cx="68" cy="118" rx="38" ry="58" fill="url(#gBody)" stroke="#2b1a12" stroke-width="4" transform="rotate(-16 68 118)"/>
+              <ellipse cx="68" cy="120" rx="22" ry="38" fill="#7c1c13" opacity=".55" transform="rotate(-16 68 120)"/>
+              <ellipse cx="232" cy="118" rx="38" ry="58" fill="url(#gBody)" stroke="#2b1a12" stroke-width="4" transform="rotate(16 232 118)"/>
+              <ellipse cx="232" cy="120" rx="22" ry="38" fill="#7c1c13" opacity=".55" transform="rotate(16 232 120)"/>
+              <ellipse cx="150" cy="116" rx="84" ry="77" fill="url(#gBody)" stroke="#2b1a12" stroke-width="4"/>
+              <ellipse cx="114" cy="139" rx="21" ry="14" fill="#ef8a6d" opacity=".32" filter="url(#soft)"/>
+              <ellipse cx="186" cy="139" rx="21" ry="14" fill="#ef8a6d" opacity=".32" filter="url(#soft)"/>
+              <path d="M70 62 L80 24 L112 52 L150 6 L188 52 L220 24 L230 62 Q150 46 70 62Z" fill="url(#gGold)" stroke="#2b1a12" stroke-width="4"/>
+              <circle cx="150" cy="30" r="7" fill="#a52a20" stroke="#2b1a12" stroke-width="2"/>
+              <circle cx="96" cy="48" r="5" fill="#a52a20" stroke="#2b1a12" stroke-width="2"/>
+              <circle cx="204" cy="48" r="5" fill="#a52a20" stroke="#2b1a12" stroke-width="2"/>
+              <ellipse cx="116" cy="110" rx="15" ry="13" fill="#fff3d2" stroke="#2b1a12" stroke-width="3"/>
+              <ellipse cx="184" cy="110" rx="15" ry="13" fill="#fff3d2" stroke="#2b1a12" stroke-width="3"/>
+              <circle id="pupL" cx="116" cy="110" r="5" fill="#2b1a12"/>
+              <circle id="pupR" cx="184" cy="110" r="5" fill="#2b1a12"/>
+              <circle cx="111" cy="105" r="2.6" fill="#fff" opacity=".9"/>
+              <circle cx="179" cy="105" r="2.6" fill="#fff" opacity=".9"/>
+              <path d="M150 78 L156 92 L150 98 L144 92Z" fill="url(#gGold)" stroke="#2b1a12" stroke-width="1.5"/>
+              <path d="M136 156 C126 198 182 204 168 248 C162 270 128 268 124 248" fill="none" stroke="#2b1a12" stroke-width="34" stroke-linecap="round"/>
+              <path d="M136 156 C126 198 182 204 168 248 C162 270 128 268 124 248" fill="none" stroke="url(#gBody)" stroke-width="28" stroke-linecap="round"/>
+              <path d="M140 168 C134 200 174 206 164 244" fill="none" stroke="#6d160f" stroke-width="2" opacity=".45"/>
+              <path d="M170 152 L192 180 L168 176Z" fill="#fff3d2" stroke="#2b1a12" stroke-width="3"/>
+              <path d="M112 174 Q150 198 188 174" fill="none" stroke="url(#gGold)" stroke-width="7" stroke-linecap="round"/>
+              <circle cx="126" cy="184" r="4" fill="#f6dda0" stroke="#2b1a12" stroke-width="1.5"/>
+              <circle cx="150" cy="190" r="4" fill="#a52a20" stroke="#2b1a12" stroke-width="1.5"/>
+              <circle cx="174" cy="184" r="4" fill="#f6dda0" stroke="#2b1a12" stroke-width="1.5"/>
+            </svg>
+            <div class="tag">॥ श्री गणेशाय नमः ॥</div>
+          </section>
+        </div>
+      </div>
+      <div class="rod bottom" id="rodBottom"></div>
+    </div>
+    <div class="hint" id="hint">नीचे स्क्रॉल करें — पत्रिका खुलती है ↓</div>
+  </div>
+</div>
+<script>
+(function(){
+ var wrap=document.getElementById('wrap'),stage=document.getElementById('stage'),paper=document.getElementById('paper'),
+ sw=document.getElementById('scrollWrap'),hd=document.getElementById('secHeader'),
+ d=document.getElementById('secDetails'),n=document.getElementById('secNames'),g=document.getElementById('secGanesh'),
+ pl=document.getElementById('pupL'),pr=document.getElementById('pupR'),hint=document.getElementById('hint');
+ var ch=0,natural=0;
+ function cl(v){return Math.max(0,Math.min(1,v));}
+ function measure(){
+  sw.style.zoom='1';
+  ch=document.querySelector('.content').scrollHeight;
+  natural=ch+58;
+ }
+ measure();
+ window.addEventListener('resize',measure);
+ function tick(){
+  var total=wrap.offsetHeight-window.innerHeight;
+  var p=cl(-wrap.getBoundingClientRect().top/total);
+  var z=Math.min(1,stage.clientHeight*0.90/natural);
+  var cur=parseFloat(sw.style.zoom||'1');
+  if(Math.abs(cur-z)>0.005)sw.style.zoom=z.toFixed(3);
+  var u=cl(p/0.84);
+  paper.style.height=Math.round(u*ch)+'px';
+  hd.style.opacity=cl((u-0.01)/0.07).toFixed(3);
+  n.style.opacity=cl((u-0.27)/0.10).toFixed(3);
+  d.style.opacity=cl((u-0.49)/0.10).toFixed(3);
+  g.style.opacity=cl((u-0.69)/0.10).toFixed(3);
+  var glow=cl((u-0.74)/0.12);
+  var r=(5+2.4*glow).toFixed(1);
+  pl.setAttribute('r',r);pr.setAttribute('r',r);
+  var col=glow>0.35?'#ffd24a':'#2b1a12';
+  pl.setAttribute('fill',col);pr.setAttribute('fill',col);
+  hint.style.opacity=cl(1-p*7).toFixed(3);
+  requestAnimationFrame(tick);
+ }
+ requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>

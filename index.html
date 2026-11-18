@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>शुभ विवाह | Shivam & Kumkum</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css?v=6">
+</head>
+<body>
+  <video id="bgVideo" class="bg-video" autoplay muted loop playsinline preload="auto">
+    <source src="assets/background.mp4?v=3" type="video/mp4">
+  </video>
+  <div class="overlay" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="monogram"><span>॥</span> शुभ विवाह <span>॥</span></div>
+    <button id="soundBtn" class="sound-btn" type="button" aria-pressed="false">
+      <span class="sound-dot" aria-hidden="true"></span>
+      <span id="soundLabel">SOUND OFF</span>
+    </button>
+  </header>
+
+  <main class="stage">
+    <section class="hero">
+      <p class="eyebrow">THE WEDDING INVITATION</p>
+      <h1><span>शिवम</span><i>&</i><span>कुमकुम</span></h1>
+      <p class="date-line">गुरुवार, 26 नवंबर 2026 <b>•</b> शाम 6:00 बजे</p>
+      <div class="divider"><span></span><b>✦</b><span></span></div>
+      <h2>वेडिंग कार्ड आप कैसे देखना चाहेंगे?</h2>
+      <p class="hint">Choose how you would like to view the invitation</p>
+
+      <div class="options">
+        <button class="option" type="button" data-action="pdf">
+          <span class="option-no">01</span>
+          <span class="option-icon">PDF</span>
+          <span class="option-title">PDF Card</span>
+          <span class="option-sub">खोलें / डाउनलोड करें</span>
+          <span class="option-arrow">→</span>
+        </button>
+
+        <button class="option featured" type="button" data-action="video">
+          <span class="option-no">02</span>
+          <span class="option-icon">PLAY</span>
+          <span class="option-title">Animated Wedding Card</span>
+          <span class="option-sub">हमारी बनाई हुई वीडियो कार्ड</span>
+          <span class="option-arrow">→</span>
+        </button>
+
+        <button class="option" type="button" data-action="patrika">
+          <span class="option-no">03</span>
+          <span class="option-icon">OPEN</span>
+          <span class="option-title">Scroll Patrika</span>
+          <span class="option-sub">स्क्रॉल करें, पत्रिका खुलेगी</span>
+          <span class="option-arrow">→</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">S.R.K Farm House • मंशागढ़ी नगलिया मोड़, झाझर रोड • जिला बुलंदशहर</footer>
+
+  <div id="videoModal" class="modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-label="Animated Wedding Card">
+      <button class="modal-close" type="button" data-close aria-label="Close">✕</button>
+      <div class="modal-title">Animated Wedding Card</div>
+      <video id="cardVideo" controls playsinline preload="auto">
+        <source src="assets/animated-wedding-card.mp4?v=2" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div id="pdfModal" class="modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-box pdf-box" role="dialog" aria-modal="true" aria-label="Wedding Invitation PDF">
+      <button class="modal-close" type="button" data-close aria-label="Close">✕</button>
+      <div class="modal-title">Wedding Invitation PDF</div>
+      <div class="pdf-pages">
+        <img src="assets/pdf-page-1.png?v=2" alt="Wedding invitation page 1">
+        <img src="assets/pdf-page-2.png?v=2" alt="Wedding invitation page 2">
+        <img src="assets/pdf-page-3.png?v=2" alt="Wedding invitation page 3">
+      </div>
+      <a class="pdf-download" href="assets/wedding-card.pdf?v=2" download>DOWNLOAD PDF ↓</a>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js?v=7"></script>
+</body>
+</html>
